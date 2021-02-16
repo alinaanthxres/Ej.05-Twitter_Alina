@@ -1,0 +1,105 @@
+.modal {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    grid-template-rows: 2rem auto 1fr;
+
+    .modal_overlay {
+        grid-area: 1 / 1/ -1/ -1;
+        background: rgba(94, 94, 94, 0.5);
+
+    }
+
+    .modal_holder {
+        grid-area: 2 / 2/ span 1/ span 1;
+        background-color: white;
+        display: grid;
+        grid-template-rows: 55px 1fr;
+        border-radius: 20px;
+
+        .modal_header {
+            grid-row: 1 / 2;
+            padding-left: 1.2em;
+            margin-top: auto;
+            margin-bottom: auto;
+
+            .fa-close {
+                font-size: 1.5em;
+                color: $corporateColor;
+                cursor: pointer;
+            }
+        }
+
+        .modal_body {
+
+            border-top: 1px solid $lightGrey;
+            grid-row: 2 / 3;
+
+            .new_formModal {
+
+                .tuitModal {
+                    display: grid;
+                    grid-template-columns: 75px 1fr 120px;
+                    grid-template-rows: 1fr 55px;
+
+
+                    .tuitIconModal {
+                        grid-row: 1/ 2;
+                        grid-column: 1/ 2;
+
+                        .userIconModal {
+                            max-height: 75px;
+                            border-radius: 100%;
+                            padding: 0.7em;
+                        }
+                    }
+
+                    .tuitTextModal {
+
+                        border-bottom: 1px solid $lightGrey;
+                        grid-row: 1/ 2;
+                        grid-column: 2/ 4;
+                        height: 200px;
+                        padding-right: 1em;
+                        font-size: 1.2em;
+
+                        #tuiteaModal {
+                            @include tuitea;
+                        }
+
+                        textarea:focus {
+                            outline: none;
+                        }
+
+                    }
+
+                    .tuitFooterModal {
+                        grid-row: 2/ 3;
+                        grid-column: 3/ 4;
+                        margin: auto 0 auto 0;
+
+                        .botonTuitModal {
+                            @include button;
+                            height: 40px;
+                        }
+
+                        input:focus{
+                            outline:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.opened {
+        visibility: visible;
+    }
+
+
+}

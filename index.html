@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <title>Boiler</title>
+
+    <meta name="description" content="" />
+    <link rel="apple-touch-icon" href="./assets/img/icon.png" />
+    <link rel="icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link href="./assets/css/main.css.map" />
+
+</head>
+
+<body>
+    <main class="main">
+
+        <!--Menú izquierda-->
+
+        <section class="mainnav">
+            <div class="twitterIcon">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                </svg>
+            </div>
+
+            <nav class="nav">
+                <!--
+                <div class="nav_element">
+                    <span class="fa fa-home"></span>
+                    <a href="inicio">Inicio</a>
+                </div>
+                <div class="nav_element">
+                    <span class="fa fa-hashtag"></span>
+                    <a href="explorar">Explorar</a>
+                </div>
+                <div class="nav_element">
+                    <span class="fa fa-bell"></span>
+                    <a href="notificaciones">Notificaciones</a>
+                </div>
+                <div class="nav_element">
+                    <span class="fa fa-search"></span>
+                    <a href="mensajes">Mensajes</a>
+                </div>
+                <div class="nav_element">
+                    <span class="fa fa-bookmark"></span>
+                    <a href="guardados">Guardados</a>
+                </div>
+                <div class="nav_element">
+                    <span class="fa fa-list"></span>
+                    <a href="listas">Listas</a>
+                </div>
+                <div class="nav_element">
+                    <span class="fa fa-user"></span>
+                    <a href="perfil">Perfil</a>
+                </div>
+                <div class="nav_element">
+                    <span class="fa fa-ellipsis-h"></span>
+                    <a href="more">Más opciones</a>
+                </div>
+                 -->
+            </nav>
+            <div class="botonCrearBox">
+                <span href="#">
+                    <input type="submit" class="buttonCreate" name="botonCrear" value="Twittear">
+                </span>
+            </div>
+        </section>
+
+
+        <!--Central-->
+
+        <section class="central">
+            <div class="header">
+                <h1>Home</h1>
+            </div>
+
+            <div class="tuiteador">
+                <form action="#" class="new_form" name="new">
+                    <div class="tuitMaker">
+
+                        <div class="tuiteaUser">
+                            <img class="tuiteaUserIcon" src="assets/img/user-icon.jpg" alt="userIcon">
+
+                        </div>
+
+                        <div class="tuiteaText">
+                            <textarea type="text" id="tuitea" name="tuitea" placeholder="¿Qué está pasando?"></textarea>
+                        </div>
+
+                        <div class="tuiteaFooter">
+                            <input id="tuiteaBoton" type="submit" class="botonTuit" name="botonTuitName"
+                                value="Twittear">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <!--FEED----------------->
+
+            <div class="tuitFeed">
+                <!--MODELO DE TUIT
+                <div class="tuit">
+
+                    <div class="tuitIcon">
+                        <img class="userIcon" src="assets/img/user-icon.jpg" alt="userIcon">
+                    </div>
+
+                    <div class="tuitUser">
+                        <h1 class="userName">Lolita Flores</h1>
+                        <h2 class="userAt">@sarandonga55</h2>
+                    </div>
+
+
+                    <p class="tuitText">Los niños ? Por favor nadie dice nada de los niños</p>
+
+                    <div class="tuitIcons">
+                        <span class="tuitIcon fa fa-comment"></span>
+                        <span class="tuitIcon fa fa-retweet"></span>
+                        <div class="likeButton">
+                             <span class="tuitIcon fa fa-heart"></span>
+                            <div class="numberLikes">${tweet.likes}</div>
+                         </div>
+                        <span class="tuitIcon fa fa-ellipsis-h"></span>
+                    </div>
+
+                </div>
+                -->
+            </div>
+
+
+        </section>
+
+        <!--Sección derecha-->
+
+        <aside class="aside">
+            <form class="search" action="">
+                <button type="submit"><i class="fa fa-search"></i><input type="text" placeholder="Busca en Twitter"
+                        name="search"></button>
+            </form>
+
+            <div class="extras">
+                <div class="counter">
+                    <div class="counterTweets"></div>
+                    <h2>Tweets</h2>
+                </div>
+                <div class="trashAll">
+                    <span class="trashAllIcon fa fa-trash"></span>
+                </div>
+            </div>
+        </aside>
+
+
+        <!--Modal-->
+
+        <div class="modal">
+            <div class="modal_overlay"></div>
+            <div class="modal_holder">
+
+                <div class="modal_header">
+                    <div class="close_button">
+                        <span class="fa fa-close"></span>
+                    </div>
+                </div>
+
+                <div class="modal_body">
+                    <form class="new_formModal" name="new_modal">
+
+                        <div class="tuitModal">
+
+                            <div class="tuitIconModal">
+                                <img class="userIconModal" src="assets/img/user-icon.jpg" alt="userIcon">
+
+                            </div>
+                            <div class="tuitTextModal">
+                                <textarea type="text" id="tuiteaModal" name="tuitea"
+                                    placeholder="¿Qué está pasando?"></textarea>
+                            </div>
+
+                            <div class="tuitFooterModal">
+                                <input type="submit" class="botonTuitModal" name="botonTuitName" value="Twittear">
+
+                            </div>
+
+                        </div>
+                </div>
+
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./app/data.js"></script>
+    <script src="./app/main.js"></script>
+</body>
+
+</html>

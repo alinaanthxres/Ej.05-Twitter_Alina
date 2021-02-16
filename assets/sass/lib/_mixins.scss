@@ -1,0 +1,33 @@
+@mixin button {
+    background-color: #0597F2;
+    color: white;
+    font-weight: 700;
+    border: 0;
+    padding: 0.2em 1.4em;
+    border-radius: 32px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(27, 142, 196);
+    }
+
+    &:active {
+        background-color: rgb(2, 118, 172);
+    }
+
+}
+
+@mixin tuitea {
+    border: 0;
+    margin: 1.2em 0 0 0;
+    resize: none;
+    width: 100%;
+    height: 88%;
+}
+
+@mixin title {
+    font-size: 1.2em;
+    font-family: 'Helvetica', sans-serif;
+    color: black;
+    font-weight: 700;
+}

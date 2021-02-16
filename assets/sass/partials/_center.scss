@@ -1,0 +1,188 @@
+.central {
+    grid-column: 3;
+    border-left: 1px solid $lightGrey;
+    border-right: 1px solid $lightGrey;
+
+    .header {
+        border-bottom: 1px solid $lightGrey;
+        cursor: pointer;
+
+        h1 {
+            padding: 0.8em 0.6em;
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 800;
+        }
+    }
+
+    .tuiteador {
+        border-bottom: 1px solid $lightGrey;
+
+        .new_form {
+            height: 150px;
+            width: 100%;
+
+            .tuitMaker {
+                height: 150px;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 75px 1fr 120px;
+                grid-template-rows: 1fr 50px;
+
+                .tuiteaUser {
+                    grid-row: 1/ 2;
+                    grid-column: 1/ 2;
+
+                    .tuiteaUserIcon {
+                        max-height: 72px;
+                        border-radius: 100%;
+                        padding: 0.7em;
+                        margin-left: 0.3em;
+                    }
+                }
+
+                .tuiteaText {
+                    grid-row: 1/ 2;
+                    grid-column: 2/ 4;
+                    padding-right: 1em;
+                    font-size: 1.2em;
+
+                    #tuitea {
+                        @include tuitea;
+                    }
+
+                    textarea:focus {
+                        outline: none;
+                    }
+
+                }
+
+                .tuiteaFooter {
+                    grid-row: 2/ 3;
+                    grid-column: 3/ 4;
+
+                    .botonTuit {
+                        @include button;
+                        height: 40px;
+                    }
+
+                    input:focus {
+                        outline: none;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+/*
+.new_form {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: auto 80px;
+    align-items: right;
+    margin-right: 1em;
+}
+*/
+.tuit {
+    border-bottom: 1px solid $lightGrey;
+    max-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-rows: 40px 1fr 30px;
+
+
+    .tuitIcon {
+        grid-row: 1/ 2;
+        grid-column: 1/ 4;
+
+        .userIcon {
+            max-height: 75px;
+            border-radius: 100%;
+            padding: 0.7em;
+            grid-row: 1/ 2;
+            grid-column: 1/ 2;
+        }
+    }
+
+    .tuitUser {
+        grid-row: 1/ 2;
+        grid-column: 2/ 3;
+        display: flex;
+        padding-top: 1em;
+
+        .userName {
+            font-size: 0.9em;
+            font-weight: 800;
+
+        }
+
+        .userAt {
+            font-size: 1em;
+            padding-left: 0.5em;
+            color: rgb(177, 177, 177);
+            font-weight: 100;
+        }
+
+        .trashButton {
+            padding-left: 0.7em;
+
+            .trash {}
+        }
+    }
+
+
+    .tuitText {
+        grid-row: 2/ 3;
+        grid-column: 2/ 3;
+        max-height: fit-content;
+    }
+
+    .tuitIcons {
+        grid-row: 3/ 4;
+        grid-column: 2/ 3;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2em;
+        color: $darkGrey;
+
+        .likeButton {
+            display: flex;
+            align-items: center;
+            &:visited {
+                color: red;
+            }
+            .numberLikes {
+                padding-left: 15px;
+            }
+
+            
+        }
+
+        .rtButton {
+            display: flex;
+            align-items: center;
+
+            .numberRt {
+                padding-left: 15px;
+            }
+        }
+
+        .commiButton {
+            display: flex;
+            align-items: center;
+
+            .numberCommi {
+                padding-left: 15px;
+            }
+
+        }
+
+    }
+
+}

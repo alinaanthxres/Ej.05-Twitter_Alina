@@ -1,0 +1,70 @@
+.mainnav {
+    grid-column: 2;
+    display: flex;
+    margin-top: 1em;
+    flex-flow: column;
+
+    .twitterIcon {
+        padding-left: 1em;
+        .logo {
+            fill: $corporateColor;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+    }
+
+
+    .nav {
+
+        .nav_element {
+            height: 45px;
+            align-items: center;
+            margin: 0.7em 0 0.7em 0;
+            display: flex;
+            padding-right: 1em;
+            border-radius: 32px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(233, 247, 255);
+
+                .fa {
+                    color: $corporateColor;
+                }
+
+                a {
+                    color: $corporateColor;
+                }
+            }
+
+            .fa {
+                font-size: 1.7em;
+                color: $darkGrey;
+                padding-left: 0.5em;
+            }
+
+            a {
+                @include title;
+                margin-left: 1em;
+            }
+
+        }
+    }
+
+    .botonCrearBox {
+
+        .buttonCreate {
+            height: 50px;
+            width: 230px;
+            @include button;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+    }
+
+}
